@@ -51,6 +51,8 @@ output "m" {
 }
 
 
+###
+variable "c" {}
 
 
 

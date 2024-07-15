@@ -53,6 +53,9 @@ output "m" {
 
 ###
 variable "c" {}
+output "c" {
+  value = var.c
+}
 
 
 

@@ -23,6 +23,13 @@ variable "l" {
 }
 # values in list need not to be same data type
 
+# Map Variable
+variable "m" {
+  default = {
+    course = "DevOps"
+    trainer = "John"
+  }
+}
 
 # outputs
 # Direct values does not require to be accessed with ${}
@@ -38,6 +45,11 @@ output "x1" {
 output "l" {
   value = var.l[0]
 }
+
+output "m" {
+  value = "Course Name - ${var.m["course"]} , Trainer Name - ${var.m["trainer"]}"
+}
+
 
 
 

@@ -7,5 +7,5 @@ variable "domain_name" {
 }
 
 variable "components" {
-  default = ["frontend", "catalogue", "mongo"]
+  default = ["frontend", "mongo", "catalogue"]
 }

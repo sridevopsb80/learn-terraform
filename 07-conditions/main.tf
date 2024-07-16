@@ -5,6 +5,6 @@ resource "aws_route53_record" "frontend" {
   name    = "test.rdevopsb80.online"
   type    = "A"
   ttl     = 15
-  records = [1.1.1.1]
+  records = ["1.1.1.1"]
 }
 

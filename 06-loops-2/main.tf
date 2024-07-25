@@ -5,11 +5,11 @@ resource "null_resource" "fruits" {
 variable "fruits" {
   default = {
     apple = {
-      name = "apple"
+      name     = "apple"
       quantity = 100
     }
     banana = {
-      name = "banana"
+      name     = "banana"
       quantity = 20
     }
   }
@@ -21,9 +21,9 @@ resource "null_resource" "instances" {
 
 variable "instances" {
   default = {
-    frontend = {}
+    frontend  = {}
     catalogue = {}
-    mongo = {}
+    mongo     = {}
   }
 }
 

@@ -4,17 +4,17 @@ variable "domain_name" {
 
 variable "components" {
   default = {
-    frontend = {}
-    mongo = {}
+    frontend  = {}
+    mongo     = {}
     catalogue = {}
-    redis = {}
-    rabbitmq = {}
-    mysql = {}
-    user = {}
-    cart = {}
-    shipping = {}
-    payment = {}
-    dispatch = {}
+    redis     = {}
+    rabbitmq  = {}
+    mysql     = {}
+    user      = {}
+    cart      = {}
+    shipping  = {}
+    payment   = {}
+    dispatch  = {}
   }
 }
 

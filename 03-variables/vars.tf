@@ -19,14 +19,14 @@ variable "z" {
 
 # List Variable
 variable "l" {
-  default = [10, 20 , "abc", false]
+  default = [10, 20, "abc", false]
 }
 # values in list need not to be same data type
 
 # Map Variable
 variable "m" {
   default = {
-    course = "DevOps"
+    course  = "DevOps"
     trainer = "John"
   }
 }

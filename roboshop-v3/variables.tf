@@ -3,7 +3,7 @@ variable "instance_type" {
 }
 
 variable "domain_name" {
-  default = "rdevopsb80.online"
+  default = "sridevops.site"
 }
 
 variable "components" {

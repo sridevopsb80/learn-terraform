@@ -31,7 +31,7 @@ resource "aws_route53_record" "mongo" {
   name    = "mongo.dev.sridevops.site"
   type    = "A"
   ttl     = 15
-  records = [aws_instance.mongo.private_ip]
+  records = [aws_instance.mongo.private_ip] #provider_resource_label.local_resource_label.argument
 }
 
 resource "aws_instance" "catalogue" {

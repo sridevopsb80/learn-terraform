@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z00376861T6KFA01SJSIS"
+  zone_id = "Z02073473N3J0S3WVZG5G"
   name    = "frontend.dev.sridevops.site"
   type    = "A"
   ttl     = 15
@@ -27,7 +27,7 @@ resource "aws_instance" "mongo" {
 }
 
 resource "aws_route53_record" "mongo" {
-  zone_id = "Z00376861T6KFA01SJSIS"
+  zone_id = "Z02073473N3J0S3WVZG5G"
   name    = "mongo.dev.sridevops.site"
   type    = "A"
   ttl     = 15
@@ -45,7 +45,7 @@ resource "aws_instance" "catalogue" {
 }
 
 resource "aws_route53_record" "catalogue" {
-  zone_id = "Z00376861T6KFA01SJSIS"
+  zone_id = "Z02073473N3J0S3WVZG5G"
   name    = "catalogue.dev.sridevops.site"
   type    = "A"
   ttl     = 15

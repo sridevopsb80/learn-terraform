@@ -2,7 +2,7 @@
 # = expression ? TRUE_VAL : FALSE_VAL
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z00376861T6KFA01SJSIS"
+  zone_id = "Z02073473N3J0S3WVZG5G"
   name    = "test.sridevops.site"
   type    = "A"
   ttl     = var.ttl == "" ? 15 : var.ttl

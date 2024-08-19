@@ -10,7 +10,7 @@ resource "aws_instance" "frontend" {
 
 resource "aws_route53_record" "frontend" {
   zone_id = "Z00376861T6KFA01SJSIS"
-  name    = "frontend.dev.rdevopsb80.online"
+  name    = "frontend.dev.sridevops.site"
   type    = "A"
   ttl     = 15
   records = [aws_instance.frontend.private_ip]
@@ -28,7 +28,7 @@ resource "aws_instance" "mongo" {
 
 resource "aws_route53_record" "mongo" {
   zone_id = "Z00376861T6KFA01SJSIS"
-  name    = "mongo.dev.rdevopsb80.online"
+  name    = "mongo.dev.sridevops.site"
   type    = "A"
   ttl     = 15
   records = [aws_instance.mongo.private_ip]
@@ -46,7 +46,7 @@ resource "aws_instance" "catalogue" {
 
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z00376861T6KFA01SJSIS"
-  name    = "catalogue.dev.rdevopsb80.online"
+  name    = "catalogue.dev.sridevops.site"
   type    = "A"
   ttl     = 15
   records = [aws_instance.catalogue.private_ip]

@@ -15,7 +15,7 @@ variable "z" {
   default = "Hello"
 }
 
-# Values numbers and booleans need not to be quoted
+# Values numbers and booleans need not be quoted. Strings must be.
 
 # List Variable
 variable "l" {
@@ -37,13 +37,13 @@ output "x" {
   value = var.x
 }
 
-# Accessing Variable has a combination with a string then we need to refer the variable with ${}
+# If we are accessing a Variable along with a string then we need to refer the variable with ${}
 output "x1" {
   value = "Value of x - ${var.x}"
 }
 
 output "l" {
-  value = var.l[0]
+  value = var.l[0] #calling the first value in var l
 }
 
 output "m" {
@@ -53,12 +53,19 @@ output "m" {
 
 ###
 variable "c" {
-  type = number
+  type = number #value is mentioned to be a number specifically. it cannot be any other.
 }
 
 output "c" {
   value = var.c
 }
 
+### here, we are not providing a value for c. while running terraform apply, there will be a prompt for the value of c. if no value is provided, it will not show any value. to provide a value during execution, use -var c=100. the value of c can be a number or a string or boolean.
+
+variable "c" { }
+
+output "c" {
+  value = var.c
+}
 
 

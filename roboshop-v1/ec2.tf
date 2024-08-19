@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
   ami                    = "ami-041e2ea9402c46c32"
   instance_type          = "t3.small"
-  vpc_security_group_ids = ["sg-065fe091c4525f4dd"] # a list of security group ids to associate. provided id is for allow-all.
+  vpc_security_group_ids = ["sg-069109d11f4d4ff0f"] # a list of security group ids to associate. provided id is for allow-all.
 
   tags = {
     Name = "frontend.dev"
@@ -19,7 +19,7 @@ resource "aws_route53_record" "frontend" {
 resource "aws_instance" "mongo" {
   ami                    = "ami-041e2ea9402c46c32"
   instance_type          = "t3.small"
-  vpc_security_group_ids = ["sg-065fe091c4525f4dd"]
+  vpc_security_group_ids = ["sg-069109d11f4d4ff0f"]
 
   tags = {
     Name = "mongo.dev"
@@ -37,7 +37,7 @@ resource "aws_route53_record" "mongo" {
 resource "aws_instance" "catalogue" {
   ami                    = "ami-041e2ea9402c46c32"
   instance_type          = "t3.small"
-  vpc_security_group_ids = ["sg-065fe091c4525f4dd"]
+  vpc_security_group_ids = ["sg-069109d11f4d4ff0f"]
 
   tags = {
     Name = "catalogue.dev"

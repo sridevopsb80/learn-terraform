@@ -1,3 +1,5 @@
+##data sources are used to retrieve information from aws
+
 data "aws_ami" "ami" {
   most_recent = true
   name_regex  = "RHEL-9-DevOps-Practice"

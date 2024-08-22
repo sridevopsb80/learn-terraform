@@ -1,9 +1,11 @@
+#as opposed to resource, data sources are used to retrieve information from aws
+
 data "aws_ami" "example" {
   most_recent = true
-  name_regex  = "RHEL-9-DevOps-Practice"
-  owners      = ["973714476881"]
+  name_regex  = "RHEL-9-DevOps-Practice" #name of the ami
+  owners      = ["973714476881"] #amazon owner account number
 }
 
 output "ami" {
-  value = data.aws_ami.example
+  value = data.aws_ami.example #data block needs to be prefixed with data unlike resource
 }

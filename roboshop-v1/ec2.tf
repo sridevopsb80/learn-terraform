@@ -4,7 +4,7 @@ resource "aws_instance" "frontend" {
   vpc_security_group_ids = ["sg-069109d11f4d4ff0f"] # a list of security group ids to associate. provided id is for allow-all.
 
   tags = {
-    Name = "frontend.dev"
+    Name = "frontend.dev" #this is the instance name
   }
 }
 

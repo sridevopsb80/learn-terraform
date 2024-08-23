@@ -7,5 +7,5 @@ data "aws_ami" "example" {
 }
 
 output "ami" {
-  value = data.aws_ami.example #data block needs to be prefixed with data unlike resource
+  value = data.aws_ami.example # format for referring a resource - provider_resource_label.local_resource_label.argument. data block needs to be prefixed with data unlike resource.
 }

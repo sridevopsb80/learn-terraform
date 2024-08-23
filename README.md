@@ -24,3 +24,8 @@ Resources are part of providers and can be found under documentation under provi
 
 A resource can be referred in another resource using provider_resource_label.local_resource_label.argument.
 ````
+Data sources
+````
+As opposed to a resource, data sources are used to retrieve information from aws.
+````
+

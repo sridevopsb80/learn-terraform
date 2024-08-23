@@ -1,3 +1,5 @@
+#works on maps variable unlike count which is list
+
 variable "domain_name" {
   default = "sridevops.site"
 }

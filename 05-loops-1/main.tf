@@ -1,3 +1,5 @@
+
+
 resource "null_resource" "test" {
   count = 3
 }
@@ -7,5 +9,5 @@ variable "components" {
 }
 
 resource "null_resource" "test1" {
-  count = length(var.components)
+  count = length(var.components) #count is not widely used in terraform loops
 }

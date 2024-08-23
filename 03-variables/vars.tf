@@ -37,7 +37,7 @@ output "x" {
   value = var.x
 }
 
-# If we are accessing a Variable along with a string then we need to refer the variable with ${}
+# If we are accessing a Variable along with a string then we need to refer the variable with ${}.
 output "x1" {
   value = "Value of x - ${var.x}"
 }

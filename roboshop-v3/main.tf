@@ -5,7 +5,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = data.aws_security_groups.sg.ids
 
   tags = {
-    Name = "${var.components[count.index]}.dev"
+    Name = "${var.components[count.index]}.dev" #referencing count from resource and taking the index value
   }
 }
 

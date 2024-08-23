@@ -43,7 +43,7 @@ output "x1" {
 }
 
 output "l" {
-  value = var.l[0] #calling the first value in var l
+  value = var.l[0] #calling the first value in var l. var.indexnumber
 }
 
 output "m" {

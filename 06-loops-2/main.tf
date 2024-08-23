@@ -4,6 +4,8 @@ resource "null_resource" "fruits" {
   for_each = var.fruits
 }
 
+#for_each.key=apple
+#for_each.value=name,quantity
 variable "fruits" {
   default = {
     apple = {

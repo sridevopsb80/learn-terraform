@@ -4,6 +4,8 @@ variable "domain_name" {
   default = "sridevops.site"
 }
 
+#for_each.key=frontend
+#for_each.value=instance_type
 variable "components" {
   default = {
     frontend = {

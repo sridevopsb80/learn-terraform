@@ -1,4 +1,4 @@
-# condition in terraform is to pick a value, Not about running a block
+# condition in terraform is to pick a value, Not about running the block
 # = expression ? TRUE_VAL : FALSE_VAL
 
 resource "aws_route53_record" "frontend" {

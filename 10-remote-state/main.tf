@@ -1,3 +1,5 @@
+#creating a s3 backend to store the tfstate file
+
 resource "null_resource" "test" {}
 
 terraform {

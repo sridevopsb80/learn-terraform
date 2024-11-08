@@ -15,7 +15,7 @@ variable "z" {
   default = "Hello"
 }
 
-# Values numbers and booleans need not be quoted. Strings must be.
+# Values numbers and booleans need not be quoted. Strings must be. Only double quotes are allowed in terraform.
 
 # List Variable
 variable "l" {
@@ -43,7 +43,7 @@ output "x1" {
 }
 
 output "l" {
-  value = var.l[0] #calling the first value in var l. var.indexnumber
+  value = var.l[0] #calling the first value in var l.var.indexnumber
 }
 
 output "m" {
@@ -53,14 +53,19 @@ output "m" {
 
 ###
 variable "c" {
-  type = number #value is mentioned to be a number specifically. it cannot be any other.
+  type = number #value is mentioned to be a number specifically. it cannot be any other. if this is not provided, it might be considered as a string.
 }
 
 output "c" {
   value = var.c
 }
 
-### here, we are not providing a value for c. while running terraform apply, there will be a prompt for the value of c. if no value is provided, it will not show any value. to provide a value during execution, use -var c=100. the value of c can be a number or a string or boolean.
+### here, we are not providing a value for c in this file like the other examples. the value is defined in terraform.tfvars and demo.tfvars.
+# terraform.tfvars is the default file (has default higher precedence) it would be picked up from.
+# to make it choose demo.tfvars, we need to pass it while executing the command: terraform init; terraform apply -var-file=demo.tfvars
+#
+# if there is no value mentioned in any files, there will be a prompt for the value of c, while running terraform apply. if no value is provided, it will not show any value. to provide a value during execution, use -var c=100. the value of c can be a number or a string or boolean.
+
 
 variable "c" { }
 

@@ -1,3 +1,5 @@
+##data sources are used to retrieve information from aws
+
 resource "aws_instance" "frontend" {
   ami                    = data.aws_ami.ami.image_id
   instance_type          = var.instance_type

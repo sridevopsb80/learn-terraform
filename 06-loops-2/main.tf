@@ -1,4 +1,4 @@
-#count is not widely used in loops. for_each is preferred, which works on maps variable unlike count which is list variable
+#count is not widely used in loops. for_each is preferred, which works on maps variable unlike count which is list variable.
 
 resource "null_resource" "fruits" {
   for_each = var.fruits
@@ -18,6 +18,8 @@ variable "fruits" {
     }
   }
 }
+
+#output will show null_resource.fruits[apple], null_resource.fruits[banana] which is easier to identify.
 
 resource "null_resource" "instances" {
   for_each = var.instances

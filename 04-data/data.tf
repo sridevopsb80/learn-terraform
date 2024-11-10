@@ -1,4 +1,5 @@
-#as opposed to resource, data sources are used to retrieve information from aws
+#as opposed to resources, data sources are used to retrieve information from aws.
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
 
 data "aws_ami" "example" {
   most_recent = true
@@ -7,5 +8,5 @@ data "aws_ami" "example" {
 }
 
 output "ami" {
-  value = data.aws_ami.example # format for referring a resource - provider_resource_label.local_resource_label.argument. data block needs to be prefixed with data unlike resource.
+  value = data.aws_ami.example # format for referring a resource - provider_resource_label.local_resource_label.argument. data block needs to be prefixed with data unlike resource. data.
 }

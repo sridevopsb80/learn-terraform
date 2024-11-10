@@ -1,4 +1,5 @@
 #count is not widely used in loops. for_each is preferred, which works on maps variable unlike count which is list variable.
+#https://developer.hashicorp.com/terraform/language/meta-arguments/for_each
 
 resource "null_resource" "fruits" {
   for_each = var.fruits

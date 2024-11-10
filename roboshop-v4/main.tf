@@ -1,3 +1,5 @@
+#refer to notes on loops-1 and loops-2 to find out why for_each is being used.
+
 resource "aws_instance" "instance" {
 
   for_each = var.components #defining the variable being used for for_each loop

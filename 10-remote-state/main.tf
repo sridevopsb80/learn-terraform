@@ -1,4 +1,5 @@
-#creating a s3 backend to store the tfstate file
+#creating a s3 backend to store the tfstate file.
+#https://developer.hashicorp.com/terraform/language/settings/backends/s3
 
 resource "null_resource" "test" {}
 

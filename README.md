@@ -33,8 +33,8 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/a
 State file
 ````
 Terraform maintains state information in tfstate file. State information can be stored in postgres database or in S3. check 10-remote-state.
-https://developer.hashicorp.com/terraform/language/settings/backends/pg 
-https://developer.hashicorp.com/terraform/language/settings/backends/s3
+https://developer.hashicorp.com/terraform/language/settings/backends/pg - postgres
+https://developer.hashicorp.com/terraform/language/settings/backends/s3 - s3
 ````
 
 

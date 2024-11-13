@@ -6,4 +6,5 @@ resource "null_resource" "test" {}
 
 #Backend config
 #
-#terraform init -backend-config=env-dev/state.tfvars
+#To initialize the backend - terraform init -backend-config=env-dev/state.tfvars
+#To remove initialization - ls -A -> remove .terraform folder using rm -rf command

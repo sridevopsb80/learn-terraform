@@ -21,18 +21,19 @@ resource "aws_route53_record" "dns_record" {
   ttl      = 15
   records  = [aws_instance.instance[each.key].private_ip]
 }
-
+#resource will run based on aws_route53_record.dns_record resource creation
 resource "null_resource" "ansible" {
   depends_on = [aws_route53_record.dns_record]
   for_each   = var.components
 
+  #remote-exec provisioner is used to connect to remote nodes. provisioning and configuring instances
   provisioner "remote-exec" {
     connection {
       user     = "ec2-user"
       password = "DevOps321"
       host     = aws_instance.instance[each.key].private_ip
     }
-
+# using ansible pull
     inline = [
       "sudo pip-3.11 install ansible",
       "ansible-pull -i localhost, -U https://github.com/raghudevopsb80/roboshop-ansible main.yml -e env=dev -e role_name=${each.key}"

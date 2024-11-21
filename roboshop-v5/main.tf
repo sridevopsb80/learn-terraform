@@ -1,3 +1,7 @@
+#Using provisioner to use ansible after using terraform to create resources.
+
+# https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax
+
 resource "aws_instance" "instance" {
 
   for_each = var.components
@@ -21,6 +25,7 @@ resource "aws_route53_record" "dns_record" {
   ttl      = 15
   records  = [aws_instance.instance[each.key].private_ip]
 }
+
 #resource will run based on aws_route53_record.dns_record resource creation
 resource "null_resource" "ansible" {
   depends_on = [aws_route53_record.dns_record]

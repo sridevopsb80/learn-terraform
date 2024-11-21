@@ -112,3 +112,23 @@ Documentation:
 ````
 https://developer.hashicorp.com/terraform/language/modules
 ````
+
+## Provisioners
+
+After creating resources using terraform, we can use provisioners to provision the resources. 
+
+
+There are 3 types:
+
+1. File - copies files or directories from wherever terraform is running to the newly created resource.
+2. local-exec - can be used to execute commands on the machine where terraform is running.
+3. remote-exec - can be used to execute commands on the newly created remote resource.
+Refer roboshop-v5->main.tf for an example on how remote-exec is used. 
+Documentation:
+````
+https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax
+https://developer.hashicorp.com/terraform/language/resources/provisioners/file
+https://developer.hashicorp.com/terraform/language/resources/provisioners/local-exec
+https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec
+````
+

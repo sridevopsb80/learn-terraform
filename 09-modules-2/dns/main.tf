@@ -4,6 +4,8 @@ resource "aws_route53_record" "frontend" {
   type    = "A"
   ttl     = 15
   records = [var.private_ip]
+  #value is taken from ec2 module via root module
 }
 
 variable "private_ip" {}
+#variable is defined so that value can be obtained from root module

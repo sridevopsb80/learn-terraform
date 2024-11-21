@@ -2,5 +2,7 @@
 
 module "example" {
   source = "./example"
-  input  = 3 #value for input is defined here
+  #calls child module example
+  input  = 3
+  #value for input is defined here
 }

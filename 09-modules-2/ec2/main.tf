@@ -8,7 +8,7 @@ resource "aws_instance" "test" {
   }
 }
 
-#output being sent to root module
+#output being sent from this module to root module
 output "private_ip" {
   value = aws_instance.test.private_ip
 }

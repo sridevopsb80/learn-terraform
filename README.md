@@ -97,3 +97,12 @@ Syntax:
 ````
 = expression ? TRUE_VAL : FALSE_VAL
 ````
+
+## Modules
+
+Modules are the main way to package and reuse resource configurations with Terraform. Similar to roles in ansible. Every terraform configuration has at least one module, which is called as the root module. A module can call other modules (called child modules) to include their resources into the configuration. Check modules-1 (root-child) and modules-2(child-child) folder for example of how values are passed between modules. 
+
+Documentation:
+````
+https://developer.hashicorp.com/terraform/language/modules
+````

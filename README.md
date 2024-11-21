@@ -90,3 +90,10 @@ https://spacelift.io/blog/terraform-count-for-each
 https://developer.hashicorp.com/terraform/language/meta-arguments/for_each
 ````
 
+## Conditionals
+
+In terraform, conditional is not used to run a block of code (as it is used in shell or ansible). Here, it is used to pick a value.
+Syntax:
+````
+= expression ? TRUE_VAL : FALSE_VAL
+````

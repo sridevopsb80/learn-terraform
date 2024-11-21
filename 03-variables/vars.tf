@@ -1,3 +1,5 @@
+#Variable block
+
 # Plain variable
 
 # Number
@@ -15,7 +17,7 @@ variable "z" {
   default = "Hello"
 }
 
-# Values numbers and booleans need not be quoted. Strings must be. Only double quotes are allowed in terraform.
+# Values, numbers and booleans need not be quoted. Strings must be quoted. Only double quotes are allowed in terraform.
 
 # List Variable
 variable "l" {

@@ -45,8 +45,9 @@ output "x1" {
 }
 
 output "l" {
-  value = var.l[0] #calling the first value in var l.var.indexnumber
+  value = var.l[0]
 }
+#calling the first value in var l.var.indexnumber
 
 output "m" {
   value = "Course Name - ${var.m["course"]} , Trainer Name - ${var.m["trainer"]}"
@@ -54,8 +55,10 @@ output "m" {
 
 
 ###
+#since the value is not specified here, it needs to be passed at the time of execution.
 variable "c" {
-  type = number #value is mentioned to be a number specifically. it cannot be any other. if this is not provided, it might be considered as a string.
+  type = number
+  #value is mentioned to be a number specifically. if this is not provided, it might be considered as a string. when it is run as a string, 100 will be shown as "100" since it is considered as a string and string needs to be in double-quotes.
 }
 
 output "c" {

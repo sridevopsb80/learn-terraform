@@ -1,4 +1,4 @@
-#works on maps variable unlike count which is list
+#for each works on maps variable unlike count which is list
 
 variable "domain_name" {
   default = "sridevops.site"
@@ -6,6 +6,7 @@ variable "domain_name" {
 
 #for_each.key=frontend
 #for_each.value=instance_type
+
 variable "components" {
   default = {
     frontend = {

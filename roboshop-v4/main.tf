@@ -2,7 +2,8 @@
 
 resource "aws_instance" "instance" {
 
-  for_each = var.components #defining the variable being used for for_each loop
+  for_each = var.components
+  #defining the variable being used for for_each loop
 
   ami                    = data.aws_ami.ami.image_id
   instance_type          = each.value["instance_type"]
@@ -15,7 +16,8 @@ resource "aws_instance" "instance" {
 
 
 resource "aws_route53_record" "dns_record" {
-  for_each = var.components #defining the variable being used for for_each loop
+  for_each = var.components
+  #defining the variable being used for for_each loop
   zone_id  = data.aws_route53_zone.zone.zone_id
   name     = "${each.key}.dev.${var.domain_name}"
   type     = "A"

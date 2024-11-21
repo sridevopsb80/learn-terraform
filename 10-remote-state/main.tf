@@ -6,7 +6,8 @@ resource "null_resource" "test" {}
 terraform {
   backend "s3" {
     bucket = "sri-d80-terraform"
-    key    = "test/terraform.tfstate" #this is taking the tfstate from the test resource from previous folder. without that, this will not work. existing, provisioned resource is needed for tfstate backup.
+    key    = "test/terraform.tfstate"
+    #this is taking the tfstate from the test resource from previous folder. without that, this will not work. existing, provisioned resource is needed for tfstate backup.
     region = "us-east-1"
   }
 }

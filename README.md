@@ -56,6 +56,12 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/a
 ## State file
 
 Terraform maintains resource state information in tf state file. State information can be stored in postgres database or in S3. check 10-remote-state.
+
+To initialize backend-config for a specific environment 
+````
+terraform init -backend-config=env-dev/state.tfvars
+````
+Documentation:
 ````
 https://developer.hashicorp.com/terraform/language/settings/backends/pg - postgres
 https://developer.hashicorp.com/terraform/language/settings/backends/s3 - s3

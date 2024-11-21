@@ -60,5 +60,33 @@ Terraform maintains resource state information in tf state file. State informati
 https://developer.hashicorp.com/terraform/language/settings/backends/pg - postgres
 https://developer.hashicorp.com/terraform/language/settings/backends/s3 - s3
 ````
+## Functions and Loops
 
+Length function is used to count values in list format. 
+Example: 
+````
+count = length(var.components)
+````
+Functions documentation:
+````
+https://developer.hashicorp.com/terraform/language/functions
+https://developer.hashicorp.com/terraform/language/functions/length
+````
+
+Two types of loops:
+1. Count - not widely used. Used for list variables. As mentioned above, can be used along with length function to count the number of list variables. 
+````
+count = length(var.components)
+````
+2. For each loop - preferred. Used for map variables. 
+Refer roboshop-v3->main.tf notes for detailed info (along with example) on why for each is preferred over count.
+````
+for_each = var.fruits
+````
+
+Documentation:
+````
+https://spacelift.io/blog/terraform-count-for-each
+https://developer.hashicorp.com/terraform/language/meta-arguments/for_each
+````
 

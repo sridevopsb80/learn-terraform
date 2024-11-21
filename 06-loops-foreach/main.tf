@@ -7,6 +7,7 @@ resource "null_resource" "fruits" {
 
 #for_each.key=apple
 #for_each.value=name,quantity
+#fruits is a map variable
 variable "fruits" {
   default = {
     apple = {

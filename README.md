@@ -1,8 +1,19 @@
 # learn-terraform
 
-Terraform executes all .tf files in a folder.
+Code in blocks, denoted by {}. Various blocks are: resource block, variable block, output block, data block, local block, module block, provider block.
 
-To initialize folder
+Terraform loads all .tf files in a folder. 
+
+## Install terraform
+
+Documentation:
+````
+https://developer.hashicorp.com/terraform/install
+````
+
+## Terraform phases for execution
+
+To initialize folder. Downloads necessary provider plugin. 
 ````
 terraform init
 ````
@@ -10,7 +21,7 @@ Plan
 ````
 terraform plan
 ````
-Apply
+Apply - If the resource already exists, it will not be recreated.
 ````
 terraform apply
 ````
@@ -18,21 +29,34 @@ Destroy without prompt
 ````
 terraform destroy -auto-approve
 ````
-Resources
+
+## Resources
+
+Used to provision resources.
+
+Resources are part of providers and can be found under documentation under providers in terraform registry. 
+Arguments are inputs (keys).
+Attributes are values that can be used after the creation of the resource. For example, in case of ami, it might be the private ip.
+A resource can be referred in another resource using provider_resource_label.local_resource_label.argument. Ex: aws_instance.catalogue.private_ip
+
+Documentation: 
 ````
-Resources are part of providers and can be found under documentation under providers in terraform registry. Arguments are inputs. Attributes are values that can be used after the creation of the resource. For example, in case of ami, it might be the private ip.
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ami.html
 
-A resource can be referred in another resource using provider_resource_label.local_resource_label.argument.
 ````
-Data sources
-````
+
+## Data sources
+
 As opposed to a resource, data sources are used to retrieve information from aws.
+
+Documentation:
+````
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
 ````
-State file
+## State file
+
+Terraform maintains resource state information in tf state file. State information can be stored in postgres database or in S3. check 10-remote-state.
 ````
-Terraform maintains state information in tfstate file. State information can be stored in postgres database or in S3. check 10-remote-state.
 https://developer.hashicorp.com/terraform/language/settings/backends/pg - postgres
 https://developer.hashicorp.com/terraform/language/settings/backends/s3 - s3
 ````

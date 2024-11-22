@@ -16,7 +16,6 @@ resource "aws_instance" "instance" {
 
 }
 
-
 resource "aws_route53_record" "dns_record" {
   for_each = var.components
   zone_id  = data.aws_route53_zone.zone.zone_id
@@ -26,7 +25,7 @@ resource "aws_route53_record" "dns_record" {
   records  = [aws_instance.instance[each.key].private_ip]
 }
 
-#resource will run based on aws_route53_record.dns_record resource creation
+#as denoted by depends_on, resource will only run based on aws_route53_record.dns_record resource creation
 resource "null_resource" "ansible" {
   depends_on = [aws_route53_record.dns_record]
   for_each   = var.components
@@ -46,3 +45,7 @@ resource "null_resource" "ansible" {
 
   }
 }
+
+# Remember that only three components are defined in var.components. this will execute those 3, but if we need to execute the whole list of services, they need to be defined under the variable values.
+
+# In case we include provisioner code block as part of the resource creation for instance, if there is a failure from the provisioner code block and resource creation is not a failure, provisioner will try to recreate the resource. To avoid this problem, it is advisable to use a separate null_resource code block to use provisioner.

@@ -1,6 +1,6 @@
 # learn-terraform
 
-Code in blocks, denoted by {}. Various blocks are: resource block, variable block, output block, data block, local block, module block, provider block.
+In terraform, code is defined in blocks, denoted by {}. Various blocks are: resource block, variable block, output block, data block, local block, module block, provider block.
 
 Terraform loads all .tf files in a folder. 
 

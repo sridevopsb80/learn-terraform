@@ -1,3 +1,5 @@
+#used to create infra for all the components
+
 resource "aws_instance" "instance" {
 
   for_each = var.components
